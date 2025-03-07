@@ -14,14 +14,14 @@ Route::get('/', function () {
     return view('home', compact('arcos'));
 })->name('home');
 
+
 Route::get('/home', function () {
     return view('home');
-})->middleware(['auth', 'verified'])->name('home');
+})->name('home');
 
-// Route::get('/gallery', function () {
-//     $imagenes = Gallery::all();
-//     return view('gallery', compact('imagenes'));
-// })->name('gallery');
+// Route::get('/home', function () {
+//     return view('home');
+// })->middleware(['auth', 'verified'])->name('home');
 
 Route::get('/gallery', function () {
     $imagenes = \App\Models\Gallery::with('comments.user')->get();
