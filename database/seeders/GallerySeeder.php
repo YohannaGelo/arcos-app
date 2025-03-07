@@ -14,62 +14,64 @@ class GallerySeeder extends Seeder
     {
         \App\Models\Gallery::create([
             'nombre' => 'Día de tiro con arco',
-            'imagen' => '/gallery/foto01.jpg',
+            'imagen' => 'https://res.cloudinary.com/dmgxxpkdm/image/upload/v1741358367/foto01_kn7aqb.jpg',
         ]);
 
         \App\Models\Gallery::create([
             'nombre' => 'Mariano Montávez - Arco de poleas',
-            'imagen' => '/gallery/foto02.jpg',
+            'imagen' => 'https://res.cloudinary.com/dmgxxpkdm/image/upload/v1741358362/foto02_lkshl3.jpg',
         ]);
 
         \App\Models\Gallery::create([
             'nombre' => 'Darío Rodríguez - Arco recurvo',
-            'imagen' => '/gallery/foto03.jpg',
+            'imagen' => 'https://res.cloudinary.com/dmgxxpkdm/image/upload/v1741358362/foto03_tclpa4.jpg',
         ]);
 
         \App\Models\Gallery::create([
             'nombre' => 'Yohanna Gelo - Arco de poleas',
-            'imagen' => '/gallery/foto04.jpg',
+            'imagen' => 'https://res.cloudinary.com/dmgxxpkdm/image/upload/v1741358363/foto04_kqzpgl.jpg',
         ]);
 
         \App\Models\Gallery::create([
             'nombre' => 'Alba Rodríguez -Arco estándar',
-            'imagen' => '/gallery/foto05.jpg',
+            'imagen' => 'https://res.cloudinary.com/dmgxxpkdm/image/upload/v1741358363/foto05_yfuy4c.jpg',
         ]);
 
         \App\Models\Gallery::create([
             'nombre' => 'Yohanna Gelo - Arco olímpico',
-            'imagen' => '/gallery/foto06.jpg',
+            'imagen' => 'https://res.cloudinary.com/dmgxxpkdm/image/upload/v1741358363/foto06_qvclla.jpg',
         ]);
 
         \App\Models\Gallery::create([
             'nombre' => 'Mariano Montávez - Arco recurvo',
-            'imagen' => '/gallery/foto07.jpg',
+            'imagen' => 'https://res.cloudinary.com/dmgxxpkdm/image/upload/v1741358365/foto07_batoto.jpg',
         ]);
 
         \App\Models\Gallery::create([
             'nombre' => 'Yohanna Gelo - Longbow',
-            'imagen' => '/gallery/foto08.jpg',
+            'imagen' => 'https://res.cloudinary.com/dmgxxpkdm/image/upload/v1741358365/foto08_lroo1p.jpg',
         ]);
 
         \App\Models\Gallery::create([
             'nombre' => 'Darío Rodríguez - Arco de poleas',
-            'imagen' => '/gallery/foto09.jpg',
+            'imagen' => 'https://res.cloudinary.com/dmgxxpkdm/image/upload/v1741358365/foto09_uqwxam.jpg',
         ]);
 
         \App\Models\Gallery::create([
             'nombre' => 'Mariano Montávez - Arco recurvo',
-            'imagen' => '/gallery/foto10.jpg',
+            'imagen' => 'https://res.cloudinary.com/dmgxxpkdm/image/upload/v1741358366/foto10_nai6wf.jpg',
         ]);
 
         \App\Models\Gallery::create([
             'nombre' => 'Darío Rodríguez - Puntería',
-            'imagen' => '/gallery/foto11.jpg',
+            'imagen' => 'https://res.cloudinary.com/dmgxxpkdm/image/upload/v1741358685/foto11_wzfeaz.jpg',
         ]);
 
         \App\Models\Gallery::create([
             'nombre' => 'Mariano Montávez - Feliz',
-            'imagen' => '/gallery/foto12.jpg',
+            'imagen' => 'https://res.cloudinary.com/dmgxxpkdm/image/upload/v1741358367/foto12_z3rlnx.jpg',
         ]);
+
+        
     }
 }

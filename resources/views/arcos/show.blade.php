@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mb-5">
     <h1 class="my-4 display-5">{{ $arco->nombre }}</h1>
     <div class="row">
         <div class="col-md-6">
             @if ($arco->imagen)
-                <img src="{{ asset('storage/' . $arco->imagen) }}" class="img-fluid" alt="{{ $arco->nombre }}" style="height: 400px;">
+                <img src="{{ $arco->imagen }}" class="img-fluid" alt="{{ $arco->nombre }}" style="height: 400px;">
             @else
                 <div class="bg-secondary text-white text-center py-5">Sin imagen</div>
             @endif
