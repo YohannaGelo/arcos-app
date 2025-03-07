@@ -13,8 +13,8 @@
         @foreach ($arcos as $arco)
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    @if ($arco->imagen && file_exists(public_path('storage/' . $arco->imagen)))
-                        <img src="{{ asset('storage/' . $arco->imagen) }}" class="card-img-top" alt="{{ $arco->nombre }}">
+                    @if ($arco->imagen)
+                        <img src="{{ $arco->imagen }}" class="card-img-top" alt="{{ $arco->nombre }}">
                     @else
                         <div class="card-img-top bg-secondary text-white text-center py-5">Sin imagen</div>
                     @endif

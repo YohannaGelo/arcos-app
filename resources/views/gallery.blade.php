@@ -13,8 +13,8 @@
         @foreach ($imagenes as $imagen)
         <div class="col-md-4 mb-4">
             <div class="card h-100 shadow"> <!-- Asegura que todas las tarjetas tengan la misma altura -->
-                @if ($imagen->imagen && file_exists(public_path('storage/' . $imagen->imagen)))
-                <img src="{{ asset('storage/' . $imagen->imagen) }}" class="card-img-top" alt="{{ $imagen->nombre }}">
+                @if ($imagen->imagen)
+                <img src="{{ $imagen->imagen }}" class="card-img-top" alt="{{ $imagen->nombre }}">
                 @else
                 <div class="card-img-top bg-secondary text-white text-center py-5">Sin imagen (Ruta: {{ $imagen->imagen }})</div>
                 @endif
