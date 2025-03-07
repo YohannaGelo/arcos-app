@@ -11,8 +11,8 @@
     <title>@yield('title', 'Catálogo de Arcos')</title>
 
     <!-- Bootstrap CSS -->
-    <link href="{{ vite('css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ vite('css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-icons.css') }}" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column" style="min-height: 100vh;">
@@ -32,7 +32,7 @@
     </footer>
 
     <!-- Bootstrap JS y dependencias -->
-    <script src="{{ vite('js/bootstrap.bundle.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.js') }}"></script>
 </body>
 
 </html>
