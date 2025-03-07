@@ -2,14 +2,14 @@
     <div class="container p-4">
         <div class="row">
             <div class="col-lg-6 col-md-12 mb-2">
-                <h5 class="text-uppercase">Sobre Nosotros</h5>
+                <h5 class="text-uppercase fw-medium mb-1">Sobre Nosotros</h5>
                 <p>Desde Utrera, un pueblo de Sevilla, os traemos algunos buenos<br>momentos vividos alrededor de los arcos y las flechas.
                 <br>¡Conócenos y déjanos conocerte!</p>
 
             </div>
 
-            <div class="col-lg-3 col-md-6 mb-2">
-                <h5 class="text-uppercase">Enlaces Rápidos</h5>
+            <div class="col-lg-3 col-md-6 mt-sm-3 mt-3 mt-md-0">
+                <h5 class="text-uppercase fw-medium mb-1">Enlaces Rápidos</h5>
                 <ul class="list-unstyled">
                     <li><a href="{{ route('home') }}" class="text-dark text-decoration-none">Inicio</a></li>
                     <li><a href="{{ route('gallery') }}" class="text-dark text-decoration-none">Galería</a></li>
@@ -17,8 +17,8 @@
                 </ul>
             </div>
 
-            <div class="col-lg-3 col-md-6 mb-2">
-                <h5 class="text-uppercase">Síguenos</h5>
+            <div class="col-lg-3 col-md-6 mt-sm-3 mt-3 mt-md-0">
+                <h5 class="text-uppercase fw-medium mb-3">Síguenos</h5>
                 <a href="#" class="text-dark me-3"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="text-dark me-3"><i class="bi bi-instagram"></i></a>
                 <a href="#" class="text-dark"><i class="bi bi-twitter"></i></a>

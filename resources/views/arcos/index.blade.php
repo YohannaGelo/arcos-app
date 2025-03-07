@@ -19,8 +19,8 @@
                         <div class="card-img-top bg-secondary text-white text-center py-5">Sin imagen</div>
                     @endif
                     <div class="card-body">
-                        <h5 class="card-title">{{ $arco->nombre }}</h5>
-                        <p class="card-text">{{ $arco->tipo }}</p>
+                        <h5 class="card-title fs-4">{{ $arco->nombre }}</h5>
+                        <p class="card-text mb-3">{{ $arco->tipo }}</p>
                         <a href="{{ route('arcos.show', $arco->id) }}" class="btn btn-secondary">Ver detalles</a>
                     </div>
                 </div>

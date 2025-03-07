@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid container">
         <a class="navbar-brand" href="{{ route('home') }}">
-            <img src="{{ asset('img/logo_arcos.png') }}" alt="Logo" class="img-fluid" style="width: 60px; height: 60px;">
+            <img src="{{ asset('img/logo_arcos.png') }}" alt="Logo" class="img-fluid" style="width: 80px; height: 80px;">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -33,16 +33,16 @@
                 <li class="nav-item">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="nav-link btn btn-link fs-5">Cerrar Sesión</button>
+                        <button type="submit" class="nav-link btn btn-link fs-5 text-dark fw-light">Cerrar Sesión</button>
                     </form>
                 </li>
                 @else
                 <!-- Sino podemos iniciar sesión o registrarnos -->
                 <li class="nav-item">
-                    <a class="nav-link fs-5" href="{{ route('login') }}">Iniciar Sesión</a>
+                    <a class="nav-link fs-5 text-dark fw-light" href="{{ route('login') }}">Iniciar Sesión</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-5" href="{{ route('register') }}">Registrarse</a>
+                    <a class="nav-link fs-5 text-dark fw-light" href="{{ route('register') }}">Registrarse</a>
                 </li>
                 @endauth
             </ul>

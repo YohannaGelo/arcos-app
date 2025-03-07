@@ -25,7 +25,7 @@
                     <form action="{{ route('comments.store', $imagen) }}" method="POST" class="mt-auto"> <!-- mt-auto para empujar el formulario hacia abajo -->
                         @csrf
                         <textarea name="contenido" class="form-control mb-2" placeholder="Escribe un comentario..." required></textarea>
-                        <button type="submit" class="btn btn-secondary btn-sm">Comentar</button>
+                        <button type="submit" class="btn btn-secondary btn-sm ms-1">Comentar</button>
                     </form>
                     @endif
 

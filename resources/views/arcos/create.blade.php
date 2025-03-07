@@ -2,12 +2,12 @@
 
 @section('content')
 <div class="container mb-5">
-    <h1 class="my-4 text-center">Agregar Nuevo Arco</h1>
+    <h1 class="my-4 text-center display-5">Agregar Nuevo Arco</h1>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card shadow bg-light-subtle">
                 <div class="card-body">
-                    <form action="{{ route('arcos.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('arcos.store') }}" method="POST">
                         @csrf
                         <!-- Campo: Nombre -->
                         <div class="form-group mb-3">
@@ -27,10 +27,10 @@
                             <textarea name="descripcion" id="descripcion" class="form-control" rows="4" required></textarea>
                         </div>
 
-                        <!-- Campo: Imagen principal -->
+                        <!-- Campo: URL de la imagen principal (Cloudinary) -->
                         <div class="form-group mb-3">
-                            <label for="imagen" class="form-label">Imagen</label>
-                            <input type="file" name="imagen" id="imagen" class="form-control-file">
+                            <label for="imagen" class="form-label">URL de la imagen principal (Cloudinary)</label>
+                            <input type="text" name="imagen" id="imagen" class="form-control" placeholder="Ej: https://res.cloudinary.com/ejemplo/imagen.jpg" required>
                         </div>
 
                         <!-- Campo: Curiosidad -->
@@ -39,10 +39,10 @@
                             <textarea name="curiosidad" id="curiosidad" class="form-control" rows="4"></textarea>
                         </div>
 
-                        <!-- Campo: Imagen de curiosidad -->
+                        <!-- Campo: URL de la imagen de curiosidad (Cloudinary) -->
                         <div class="form-group mb-3">
-                            <label for="imagen_curiosidad" class="form-label">URL de la imagen de curiosidad</label>
-                            <input type="text" name="imagen_curiosidad" id="imagen_curiosidad" class="form-control" placeholder="Ej: https://ejemplo.com/imagen.jpg">
+                            <label for="imagen_curiosidad" class="form-label">URL de la imagen de curiosidad (Cloudinary)</label>
+                            <input type="text" name="imagen_curiosidad" id="imagen_curiosidad" class="form-control" placeholder="Ej: https://res.cloudinary.com/ejemplo/imagen_curiosidad.jpg">
                         </div>
 
                         <!-- Botones -->

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mb-5">
-    <h1 class="my-4 text-center display-5">Editar Arco: {{ $arco->nombre }}</h1>
+    <h1 class="my-4 text-center display-5">Editar: {{ $arco->nombre }}</h1>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card shadow bg-light-subtle">
@@ -29,12 +29,12 @@
                             <textarea name="descripcion" id="descripcion" class="form-control" rows="4" required>{{ $arco->descripcion }}</textarea>
                         </div>
 
-                        <!-- Campo: Imagen -->
+                        <!-- Campo: URL de la imagen principal (Cloudinary) -->
                         <div class="form-group mb-3">
-                            <label for="imagen" class="form-label">Imagen</label>
-                            <input type="file" name="imagen" id="imagen" class="form-control-file">
+                            <label for="imagen" class="form-label">URL de la imagen principal (Cloudinary)</label>
+                            <input type="text" name="imagen" id="imagen" class="form-control" value="{{ $arco->imagen }}" required>
                             @if ($arco->imagen)
-                                <img src="{{ asset('storage/' . $arco->imagen) }}" class="img-thumbnail mt-2" width="100" alt="{{ $arco->nombre }}">
+                                <img src="{{ $arco->imagen }}" class="img-thumbnail mt-2" width="100" alt="{{ $arco->nombre }}">
                             @endif
                         </div>
 
@@ -44,10 +44,13 @@
                             <textarea name="curiosidad" id="curiosidad" class="form-control" rows="4">{{ $arco->curiosidad }}</textarea>
                         </div>
 
-                        <!-- Campo: URL de la imagen de curiosidad -->
+                        <!-- Campo: URL de la imagen de curiosidad (Cloudinary) -->
                         <div class="form-group mb-4">
-                            <label for="imagen_curiosidad" class="form-label">URL de la imagen de curiosidad</label>
+                            <label for="imagen_curiosidad" class="form-label">URL de la imagen de curiosidad (Cloudinary)</label>
                             <input type="text" name="imagen_curiosidad" id="imagen_curiosidad" class="form-control" value="{{ $arco->imagen_curiosidad }}">
+                            @if ($arco->imagen_curiosidad)
+                                <img src="{{ $arco->imagen_curiosidad }}" class="img-thumbnail mt-2" width="100" alt="Imagen de curiosidad">
+                            @endif
                         </div>
 
                         <!-- Botones -->
