@@ -12,7 +12,7 @@ use App\Http\Controllers\CommentController;
 Route::get('/', function () {
     $arcos = App\Models\Arco::all();
     return view('home', compact('arcos'));
-})->name('home');
+})->name('index');
 
 
 Route::get('/home', function () {
