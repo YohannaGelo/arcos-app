@@ -1,4 +1,4 @@
-<footer class="bg-light text-center text-lg-start mt-5">
+<!-- <footer class="bg-light text-center text-lg-start mt-auto"> -->
     <div class="container p-4">
         <div class="row">
             <div class="col-lg-6 col-md-12 mb-2">
@@ -29,4 +29,4 @@
     <div class="text-center p-3 bg-dark text-white">
         &copy; {{ date('Y') }} Tiro con Arco en Familia - Todos los derechos reservados
     </div>
-</footer>
+<!-- </footer> -->

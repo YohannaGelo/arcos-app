@@ -15,7 +15,7 @@
     <link href="{{ asset('css/bootstrap-icons.css') }}" rel="stylesheet">
 </head>
 
-<body>
+<body class="d-flex flex-column" style="min-height: 100vh;">
     <!-- Header -->
     <header>
         @include('layouts.navigation')
@@ -27,8 +27,8 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-    @include('layouts.footer')
+    <footer class="bg-light text-center text-lg-start mt-auto">
+        @include('layouts.footer')
     </footer>
 
     <!-- Bootstrap JS y dependencias -->
