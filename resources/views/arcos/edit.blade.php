@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mb-5">
     <h1 class="my-4 text-center display-5">Editar Arco: {{ $arco->nombre }}</h1>
     <div class="row justify-content-center">
         <div class="col-md-8">
