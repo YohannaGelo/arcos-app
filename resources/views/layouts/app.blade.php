@@ -13,8 +13,6 @@
     <!-- Bootstrap CSS -->
     @vite('resources/css/app.css')
 
-
-    <!-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> -->
     <!-- <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-icons.css') }}" rel="stylesheet"> -->
 </head>
