@@ -170,6 +170,7 @@ return [
     */
 
     'secure' => env('SESSION_SECURE_COOKIE'),
+    'same_site' => 'lax', // O 'none' si estás usando HTTPS
 
     /*
     |--------------------------------------------------------------------------
