@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Arco;
+use Illuminate\Support\Facades\Auth;
 
 class ArcoController extends Controller
 {
@@ -21,6 +22,9 @@ class ArcoController extends Controller
      */
     public function create()
     {
+        // Verificar si el usuario tiene permiso para crear arcos
+        $this->authorize('create', Arco::class);
+
         return view('arcos.create');
     }
 
@@ -29,6 +33,9 @@ class ArcoController extends Controller
      */
     public function store(Request $request)
     {
+        // Verificar si el usuario tiene permiso para crear arcos
+        $this->authorize('create', Arco::class);
+
         // Validar los datos del formulario
         $request->validate([
             'nombre' => 'required|string|max:255',
@@ -68,6 +75,10 @@ class ArcoController extends Controller
     public function edit(string $id)
     {
         $arco = Arco::findOrFail($id); // Busca el arco por su ID
+
+        // Verificar si el usuario tiene permiso para editar arcos
+        $this->authorize('update', $arco);
+
         return view('arcos.edit', compact('arco'));
     }
 
@@ -76,6 +87,11 @@ class ArcoController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $arco = Arco::findOrFail($id); // Busca el arco por su ID
+
+        // Verificar si el usuario tiene permiso para editar arcos
+        $this->authorize('update', $arco);
+
         // Validar los datos del formulario
         $request->validate([
             'nombre' => 'required|string|max:255',
@@ -85,9 +101,6 @@ class ArcoController extends Controller
             'curiosidad' => 'nullable|string',
             'imagen_curiosidad' => 'nullable|url', // Validar que sea una URL válida
         ]);
-
-        // Buscar el arco por su ID
-        $arco = Arco::findOrFail($id);
 
         // Actualizar los campos
         $arco->update([
@@ -109,6 +122,9 @@ class ArcoController extends Controller
     public function destroy(string $id)
     {
         $arco = Arco::findOrFail($id); // Busca el arco por su ID
+
+        // Verificar si el usuario tiene permiso para eliminar arcos
+        $this->authorize('delete', $arco);
 
         // Eliminar el arco de la base de datos
         $arco->delete();

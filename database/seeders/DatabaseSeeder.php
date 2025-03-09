@@ -16,21 +16,24 @@ class DatabaseSeeder extends Seeder
     {
         // Crear usuarios de prueba
         User::create([
-            'name' => 'Admin',
-            'email' => 'admin@example.com',
-            'password' => Hash::make('admin'), // Contraseña: admin
+            'name' => 'root',
+            'email' => 'root@example.com',
+            'password' => Hash::make('root'), // Contraseña: admin
+            'role' => 'admin', // Asignar rol de administrador
         ]);
 
         User::create([
             'name' => 'Pepe',
-            'email' => 'pepe@gmail.com',
+            'email' => 'pepe@example.com',
             'password' => Hash::make('pepe'),
+            'role' => 'user', // Asignar rol de usuario normal
         ]);
 
         User::create([
             'name' => 'Yohanna',
-            'email' => 'yohanna@gmail.com',
+            'email' => 'yohanna@example.com',
             'password' => Hash::make('yohanna'),
+            'role' => 'user', // Asignar rol de usuario normal
         ]);
 
         // Llamar al Seeder de Arcos
